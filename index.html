@@ -16,6 +16,7 @@ section{padding:90px 0}.hud{font:12px Space Mono;color:var(--cyan);letter-spacin
 .player{display:grid;grid-template-columns:220px 1fr;gap:38px;align-items:center}.orb{width:190px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:auto;background:radial-gradient(circle,#050711 0 11%,#65f6ff 12% 14%,#0b1421 15% 44%,#a97cff 45% 47%,#08101b 48%);box-shadow:0 0 60px #65f6ff33;animation:float 3s ease-in-out infinite}.orb.play{animation:spin 4s linear infinite}@keyframes float{50%{transform:translateY(-8px)}}@keyframes spin{to{transform:rotate(360deg)}}audio{width:100%;filter:invert(.92) hue-rotate(160deg)}
 .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{min-height:240px;border-radius:24px;border:1px solid var(--line);padding:24px;background:#09121dcc;position:relative;overflow:hidden;transition:.35s}.card:hover{transform:translateY(-8px) rotateX(2deg);border-color:#65f6ff88;box-shadow:0 20px 60px #0008}.card:nth-child(1),.card:nth-child(4){grid-column:span 7}.card:nth-child(2),.card:nth-child(3){grid-column:span 5}.ico{font-size:52px}.card h3{font-size:28px;margin:16px 0 4px}.photo-grid{columns:3;column-gap:14px;margin-top:34px}.ph{margin:0 0 14px;break-inside:avoid;border-radius:22px;overflow:hidden;border:1px solid var(--line);position:relative;cursor:zoom-in;background:#09121d}.ph img{display:block;width:100%;height:auto;transition:.7s}.ph:hover img{transform:scale(1.06)}.ph:hover{border-color:#65f6ff88;box-shadow:0 0 40px #65f6ff22}.ph:after{content:attr(data-label);position:absolute;bottom:12px;right:12px;font:11px Space Mono;background:#050711bb;padding:7px 10px;border-radius:99px}
 .lb{position:fixed;inset:0;z-index:200;display:none;place-items:center;background:#050711ee;backdrop-filter:blur(10px);cursor:zoom-out;padding:4vmin}.lb.on{display:grid}.lb img{max-width:100%;max-height:92vh;border-radius:18px;box-shadow:0 0 80px #65f6ff33;animation:pop .35s cubic-bezier(.2,1.3,.4,1)}@keyframes pop{from{transform:scale(.85);opacity:0}}
+.btn[hidden]{display:none}.lyrics{position:fixed;inset:0;z-index:250;display:none;place-items:center;background:#050711ee;backdrop-filter:blur(10px);padding:4vmin}.lyrics.on{display:grid}.lyrics-box{position:relative;width:min(640px,100%);max-height:88vh;overflow:auto;background:linear-gradient(145deg,#0e1725,#070c15);border:1px solid var(--line);border-radius:28px;padding:clamp(24px,5vw,44px);box-shadow:0 0 80px #65f6ff22;animation:pop .35s cubic-bezier(.2,1.3,.4,1)}.lyrics-title{font-size:clamp(28px,5vw,44px)}.lyrics-body{margin-top:22px;font-size:clamp(18px,2.6vw,22px);line-height:2;text-align:center;color:#dfeaf5}.stanza{margin-bottom:26px}.ltag{font:700 12px Space Mono;letter-spacing:.2em;color:var(--cyan);margin-bottom:6px}.lyrics-x{position:absolute;top:16px;left:16px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#ffffff0d;color:white;font-size:16px;cursor:pointer}.lyrics-x:hover{background:#ffffff1f}
 .surprise{position:fixed;inset:0;z-index:300;display:none;place-items:center;background:radial-gradient(circle,#150a2af2,#050711f7);cursor:pointer;padding:4vmin;overflow:hidden}.surprise.on{display:grid;animation:shake .6s}.surprise .flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}.surprise.on .flash{animation:flash .7s ease-out}.surprise .rays{position:absolute;width:160vmax;height:160vmax;background:repeating-conic-gradient(#65f6ff22 0 6deg,#0000 6deg 15deg);animation:spin 22s linear infinite;mask:radial-gradient(circle,#000 0,#0000 55%);-webkit-mask:radial-gradient(circle,#000 0,#0000 55%)}.surprise figure{margin:0;position:relative;text-align:center;max-width:min(780px,92vw)}.surprise.on figure{animation:meme 1.1s cubic-bezier(.2,1.4,.35,1) both,hover 3.5s ease-in-out 1.1s infinite}.surprise img{width:100%;max-height:70vh;object-fit:contain;border-radius:20px;border:3px solid var(--cyan);box-shadow:0 0 0 8px #a97cff44,0 0 90px #65f6ffaa,0 40px 100px #000}.surprise.on img{animation:glitch 2.4s steps(1) 1.1s infinite}.surprise figcaption{margin-top:22px;font:700 clamp(18px,3vw,28px) Space Mono;color:var(--lime);letter-spacing:.12em;text-shadow:0 0 20px #b8ff6688}.surprise .tiny{margin-top:8px;display:block}.conf{position:absolute;top:-20px;width:10px;height:16px;border-radius:2px;animation:fall linear forwards;pointer-events:none}
 @keyframes meme{0%{transform:scale(0) rotate(-540deg);opacity:0;filter:blur(20px)}60%{opacity:1;filter:blur(0)}100%{transform:scale(1) rotate(0)}}@keyframes hover{50%{transform:translateY(-10px) rotate(.8deg)}}@keyframes flash{0%{opacity:.95}100%{opacity:0}}@keyframes shake{10%,50%,90%{transform:translate(-8px,4px)}30%,70%{transform:translate(8px,-4px)}}@keyframes glitch{0%,92%,100%{transform:none;filter:none}93%{transform:translateX(-6px);filter:hue-rotate(90deg) saturate(2)}95%{transform:translateX(6px) skewX(2deg);filter:hue-rotate(-90deg)}97%{transform:translateX(-3px);filter:invert(.15)}}@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
 .timeline{position:relative;padding-right:35px}.timeline:before{content:"";position:absolute;right:7px;top:5px;bottom:5px;width:1px;background:linear-gradient(var(--cyan),var(--vio))}.event{margin:0 0 46px;position:relative}.event:before{content:"";position:absolute;right:-34px;top:8px;width:13px;height:13px;background:var(--bg);border:2px solid var(--cyan);border-radius:50%;box-shadow:0 0 20px var(--cyan)}.year{font:700 14px Space Mono;color:var(--cyan)}
@@ -33,7 +34,7 @@ section{padding:90px 0}.hud{font:12px Space Mono;color:var(--cyan);letter-spacin
 
 <section id="origin" class="reveal"><div class="hud">01 // FRIENDSHIP_CORE</div><div class="glass"><p class="huge">עמרי כזה תותח.<br>כבר עשרים שנה איתך.</p><p class="mut">מה שהתחיל בשטויות של שני ילדים הפך לאוסף בלתי סביר של חדרי בריחה, גלים, שלג, memes, סרטים, ברים, טיסות ומשפטים שאף בן אדם נורמלי לא אמור להבין.</p><div class="stats"><div class="stat"><div class="num">~20</div>שנים</div><div class="stat"><div class="num">∞</div>מימז</div><div class="stat"><div class="num">27s</div>period</div><div class="stat"><div class="num">1</div>ראלף</div></div></div></section>
 
-<section id="song" class="reveal"><div class="hud">02 // AUDIO_TRANSMISSION</div><div class="glass player"><div id="orb" class="orb">🎵</div><div><h2 class="huge">השיר של עמרי</h2><audio id="audio" controls><source src="assets/omri-song.wav" type="audio/wav"></audio></div></div></section>
+<section id="song" class="reveal"><div class="hud">02 // AUDIO_TRANSMISSION</div><div class="glass player"><div id="orb" class="orb">🎵</div><div><h2 class="huge">השיר של עמרי</h2><audio id="audio" controls><source src="assets/omri-song.wav" type="audio/wav"></audio><p><button class="btn" id="lyricsBtn" hidden>מילות השיר</button></p></div></div></section>
 
 <section id="lore" class="reveal"><div class="hud">03 // LORE_DATABASE</div><div class="cards">
 <div class="card"><div class="ico">🔐</div><h3>חדר הערב?</h3><p class="mut">״עמרי! עמרי! עמרי!״ — ואז כמובן: ״תענה אישה!״</p></div>
@@ -57,6 +58,136 @@ section{padding:90px 0}.hud{font:12px Space Mono;color:var(--cyan);letter-spacin
 
 <section class="final reveal"><div><div class="kicker">NEXT MISSION UNLOCKED</div><h2 class="grad">מחר יום חדש<br>להרפתקה.</h2><p class="huge" style="margin-top:30px">לא פראייר.</p><p class="tiny">OMRI // JONATHAN // TO BE CONTINUED...</p></div></section>
 </div>
+<template id="lyricsText">[Intro]
+עמרי...
+עמרי...
+עמרי כזה תותח
+
+[Verse 1]
+עמרי כזה תותח
+כבר עשרים שנה איתך
+אתה מרגיש בעננים
+כשהוא מדבר איתך בפנים
+
+אם תרצה קצת להסתבך
+רק תגיד וכבר נלך
+אסקייפ רום או איזה בר
+לא יודעים מה יהיה מחר
+
+[Pre-Chorus]
+רוצים לשנות?
+עמרי כאן בשבילך
+מחר יום חדש להרפתקה
+
+[Chorus]
+לא צריך תרופות
+אני צריך מטרות
+ראלף כבר יודע
+איך הסיפור הזה נגמר
+
+עוד גלים, עוד פסגות
+עוד פאודר, עוד שטויות
+עמרי אח שלי
+אנחנו לא פראיירים
+
+[Verse 2]
+גל של מטר, עשרים ושבע period
+אצלנו זה יום די סטנדרטי
+ימי פאודר כמו של ג'ורדן
+Apres ski עד ששוכחים מתי חזרנו
+
+דריפטים עם המתים
+סלפי שיכורים מחוץ למכוניות
+עוד חדר ועוד שיא
+מי בכלל סופר את השנים
+
+[Pre-Chorus]
+רוצים מטרות?
+ראלף כאן בשבילך
+מחר יום חדש להרפתקה
+
+[Chorus]
+לא צריך תרופות
+אני צריך מטרות
+ראלף כבר יודע
+איך הסיפור הזה נגמר
+
+עוד גלים, עוד פסגות
+עוד פאודר, עוד שטויות
+עמרי אח שלי
+אנחנו לא פראיירים
+
+[Verse 3]
+מייק והארווי, חליפות ודיבורים
+ג'ורדן בלפורט מוכר לנו עטים
+דיקפריו על המסך
+באטמן במשמרת
+ואנחנו שולחים מימז
+כאילו זאת עבודה מסודרת
+
+עשרים שנה של "אחי בוא"
+"תענה יא זין", "איפה אתה?"
+של תוכניות שלא תוכננו
+וסיפורים שרק אנחנו הבנו
+
+[Break]
+עמרי...
+
+[Bridge]
+ועכשיו מגיע פרק חדש
+אחרי שנים שנתת מעצמך
+עוד מעט משתחרר
+ויוצא אל העולם
+ואף אחד מאיתנו
+לא באמת יודע לאן
+
+אבל יש דבר אחד
+שאני יודע כבר מזמן
+לא משנה איפה נהיה
+או כמה יעבור הזמן
+
+אני עדיין אתקשר אליך ואגיד...
+
+[Spoken]
+עמרי!
+עמרי!
+עמרי!
+
+חדר הערב?
+
+[Build]
+כי עברנו כבר כל כך הרבה
+ויש עוד כל כך הרבה לעבור
+עשרים שנה זה לא הסוף
+עשרים שנה זה רק הפרולוג
+
+[Final Chorus]
+לא צריך תרופות
+אני צריך מטרות
+אם העולם קצת משתגע
+נצחק עליו בדרך
+
+עוד גלים, עוד פסגות
+עוד פאודר, עוד שטויות
+עוד טיסות ועוד לילות
+ועוד מיליון זיכרונות
+
+מחר יום חדש להרפתקה
+עוד יעד, עוד טיסה, עוד פסגה
+עמרי אח שלי
+עשרים שנה זה רק ההתחלה
+
+[Outro]
+ואם יום אחד נהיה זקנים
+ועדיין נשלח אחד לשני מימז
+אני אדע שלא השתנה דבר
+
+אוהב אותך אחי
+
+מחר יום חדש להרפתקה...
+
+לא פראייר.</template>
+<div class="lyrics" id="lyrics" role="dialog" aria-label="מילות השיר"><div class="lyrics-box"><button class="lyrics-x" id="lyricsX" aria-label="סגור">✕</button><div class="hud">02 // LYRICS</div><h2 class="huge lyrics-title">השיר של עמרי</h2><div class="lyrics-body" id="lyricsBody"></div></div></div>
 <div class="lb" id="lb"><img id="lbImg" alt=""></div>
 <div class="surprise" id="surprise"><div class="flash"></div><div class="rays"></div><figure><img src="assets/PHOTO-2026-04-05-17-58-58.jpg" alt=""><figcaption>TAKE THE MEDS, OMRI.</figcaption><span class="tiny">TAP ANYWHERE TO CLOSE</span></figure></div>
 <script>
@@ -69,6 +200,9 @@ function ralph(){document.getElementById('term').innerHTML='> AUTHORIZATION ACCE
 function surprise(){const el=document.getElementById('surprise');el.classList.remove('on');void el.offsetWidth;el.classList.add('on');const cols=['#65f6ff','#a97cff','#b8ff66','#fff','#ff6ad5'];for(let i=0;i<90;i++){const d=document.createElement('i');d.className='conf';d.style.left=Math.random()*100+'%';d.style.background=cols[i%cols.length];d.style.animationDuration=1.8+Math.random()*2.2+'s';d.style.animationDelay=Math.random()*.9+'s';el.appendChild(d);setTimeout(()=>d.remove(),5500)}}
 document.getElementById('surprise').onclick=e=>e.currentTarget.classList.remove('on');
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');document.querySelectorAll('.ph img').forEach(i=>i.onclick=()=>{lbImg.src=i.src;lb.classList.add('on')});lb.onclick=()=>lb.classList.remove('on');
-addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('on');document.getElementById('surprise').classList.remove('on')}});
+const lyr=document.getElementById('lyrics'),lyrTxt=document.getElementById('lyricsText').innerHTML.trim(),lyrBtn=document.getElementById('lyricsBtn');
+if(lyrTxt){const b=document.getElementById('lyricsBody');lyrTxt.split(/\n\s*\n/).forEach(blk=>{const d=document.createElement('div');d.className='stanza';blk.split('\n').forEach(l=>{l=l.trim();if(!l)return;const t=/^\[(.+)\]$/.exec(l),e=document.createElement('div');if(t){e.className='ltag';e.textContent=t[1].toUpperCase()}else e.textContent=l;d.appendChild(e)});b.appendChild(d)});lyrBtn.hidden=false}
+lyrBtn.onclick=()=>lyr.classList.add('on');document.getElementById('lyricsX').onclick=()=>lyr.classList.remove('on');lyr.onclick=e=>{if(e.target===lyr)lyr.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape'){lyr.classList.remove('on');lb.classList.remove('on');document.getElementById('surprise').classList.remove('on')}});
 </script>
 </body></html>
